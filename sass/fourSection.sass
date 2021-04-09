@@ -1,0 +1,19 @@
+@mixin colorAndSize ($color , $font-size)
+  color: $color
+  font-size: $font-size
+
+$value-map: (color: white , font-size: 15px)
+.infoContactLeft
+  & p
+    @include colorAndSize($value-map...)
+.safeHouse
+  color: white
+  text-align: center
+.infoContactRight
+  @extend .infoContactLeft
+.infoBlockFooter
+  display: flex
+  justify-content: space-around
+  padding-top: 30px
+
+

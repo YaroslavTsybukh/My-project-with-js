@@ -1,0 +1,42 @@
+%borderColor
+  border: 4px solid orange
+
+$var-background: (first: url(../img/firstTask.png), second: url(../img/secondTask.png), third: url(../img/thirdTask.png), fourth: url(../img/fourthTask.png))
+
+h2
+  color: orange
+  text-align: center
+  margin-bottom: 80px
+.allBlock
+  display: flex
+  justify-content: center
+.blockServices
+  @extend %borderColor
+  margin-bottom: 16px
+  cursor: pointer
+  width: 386px
+  height: 177px
+  @each $elem, $background in $var-background
+    &_#{$elem}
+      background: $background
+  &__paragraph
+    text-align: center
+    color: white
+    margin-top: 79px
+    font-size: 24px
+.blockRight
+  width: 590px
+  height: 753px
+  @extend %borderColor
+.repairs
+  font:
+    family: Montserrat
+    weight: bold
+    size: 22px
+  color: #FFFFFF
+  margin-top: 50px
+.serviceDescription
+  display: none
+  &__paragraph
+  @extend .blockServices__paragraph
+
